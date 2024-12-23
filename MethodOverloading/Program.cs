@@ -14,7 +14,7 @@
 
         public static string Add(int numOne, int numTwo, bool isCurrency)
         {
-            var sum = numOne + numTwo;
+            var sum = Add(numOne, numTwo);
 
             if (isCurrency && sum > 1)
             {
@@ -29,10 +29,11 @@
                 return sum.ToString();
             }
         }
-        
+
         static void Main(string[] args)
         {
-            Console.WriteLine(Add(1, 1, false));
+            Console.WriteLine(Add( 1, 1, false));
+            Console.WriteLine(Add( 0.1M , 0.2M));
         }
     }
 }
